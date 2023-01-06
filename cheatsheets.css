@@ -1,0 +1,52 @@
+.picture {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.bio-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  gap: 12px;
+}
+
+body {
+  background-color: #FBFBFF;
+  font-family: Poppins, Arial, sans-serif;
+  color: black;
+}
+
+.page-container {
+  width: 80%;
+  margin-top: 5rem;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-container {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.nav-container:hover,
+.nav-container:focus {
+  background-color: #FBFBFF;
+  color: #333;
+}
+
+.code-container {
+  font-family: 'Courier New', Courier, monospace
+}
