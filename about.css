@@ -5,18 +5,15 @@
   aspect-ratio: 1;
 }
 
-.bio-container {
-  display: flex;
-  width: 80%;
-  margin: auto;
-  margin-top: 5rem;
-  gap: 12px;
+h1 {
+  font-family: 'Playfair Display', serif;
 }
 
 body {
   background-color: #FBFBFF;
-  font-family: Poppins, Arial, sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   color: black;
+  text-align: center;
 }
 
 .page-container {
@@ -26,15 +23,17 @@ body {
 }
 
 nav {
-  display: flex;
-  gap: 0.5rem;
+  overflow: hidden;
+  float: right;
+  padding-left: 150px;
+  margin-right: 50px;
+  margin-top: 10px;
 }
 
 .nav-container {
   flex: 1;
-  background-color: #333;
-  color: #fff;
-  border: 1px solid;
+  color: #333;
+  font-family: 'Playfair Display', serif;
   padding: 0.5rem;
   text-align: center;
   text-decoration: none;
@@ -44,5 +43,25 @@ nav {
 .nav-container:hover,
 .nav-container:focus {
   background-color: #FBFBFF;
-  color: #333;
+  color: black;
+  font-weight: bold;
+  font-size:large;
+}
+
+p {
+  margin-right: 150px;
+  margin-left: 150px;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: larger;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.column2 {
+  margin-left: 300px;
+  width: 75%;
+  text-align: center;
 }

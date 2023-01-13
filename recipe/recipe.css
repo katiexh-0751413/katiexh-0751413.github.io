@@ -10,3 +10,26 @@ body {
   margin: auto;
   margin-top: 5rem;
 }
+
+nav {
+  overflow: hidden;
+  float: right;
+  padding-left: 150px;
+}
+
+.nav-container {
+  flex: 1;
+  color: #333;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+.nav-container:hover,
+.nav-container:focus {
+  background-color: #FBFBFF;
+  color: black;
+  font-weight: bold;
+  font-size:large;
+}
