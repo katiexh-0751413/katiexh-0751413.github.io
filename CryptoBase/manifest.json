@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Rilakkuma Buddy",
+  "description": "Have a Rilakkuma follow your cursor.",
+  "version": "1.0",
+  "icons": {
+    "16": "/icon16.png",
+    "48": "/icon48.png",
+    "128": "/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "/icon16.png",
+      "48": "/icon48.png",
+      "128": "/icon128.png"
+    }
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["popup.css"],
+    "js": ["popup.js"]
+  }],
+  "web_accessible_resources": [
+    {
+      "resources": [ "cursor16.png" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+    }
+  ]
+}

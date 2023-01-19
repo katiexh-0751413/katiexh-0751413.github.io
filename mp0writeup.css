@@ -1,5 +1,6 @@
 .picture {
   width: 600px;
+  height: 400px;
   border-radius: 10px;
   object-fit: scale-down;
   aspect-ratio: 1;
