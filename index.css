@@ -75,8 +75,9 @@ nav {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-h2 {
+h1, h2 {
   font-family: 'Playfair Display', serif;
+  color: #333;
 }
 
 .H, .e1, .l1, .l2, .o, .comma, .I, .apostraphe, .m, .K, .a, .t, .i, .e2, .exclamation {
