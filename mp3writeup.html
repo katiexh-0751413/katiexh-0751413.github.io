@@ -28,7 +28,13 @@
 
       <h1 class="header">MP3 Writeup</h1>
       <h2 class="overview">Overview and Usage</h2>
-        <p>For MP3, I decided to recreate Dong Nguyen's "Flappy Bird" game.</p>
+        <p>For MP3, I decided to recreate Dong Nguyen's "Flappy Bird" game. Here is a gif of the final
+          game in action: <br> <br>
+          <IMG SRC="images/mp3gif.GIF" height="300"> <br>
+        </p>
+        <p>In order to run my game, you can simply open the <a href="https://katiexh-0751413.github.io/MP3game/">Flappy Bird Game</a>
+          from the link and play the game directly. Alternatively, you could download the code from my <a href=
+        "https://github.com/katiexh-0751413/MP3game">GitHub Respository</a> and run it from your local server.</p>
         <h2 class="development process">Development Process</h2>
         <p>I broke this project up into several steps to complete it:
           <ol>
@@ -40,26 +46,39 @@
               obstacles into long rectangles instead of squares randomly scattered across the screen.
               I made two obstacle sprites, an upper and a lower one, then created a gap in between them
               for the player to jump through.<br> <br>
-              <IMG SRC="images/mp3inprogress1.png" height="300"> <br>
+              <IMG SRC="images/mp3ip1.png" height="300"> <br>
                 <em>In progress screenshot of MP3 Game</em>
             </li> <br>
             <li>Then, I randomized where the gaps will be and loaded in images for the bird, background,
               and ground. I also changed the scoring so that points will only increase by one every time
               the player jumps through a pair of pipes.<br> <br>
-              <IMG SRC="images/MP3inprogress2.png" height="300"> <br>
+              <IMG SRC="images/mp3ip2.png" height="300"> <br> <br>
+            </li>
+            <li>Then I loaded in images for the obstacles.<br> <br>
+              <IMG SRC="images/mp3final.png" height="300"> <br> <br>
+            </li>
+            <li>Lastly, I loaded in sound for when the player jumps, scores a point, and dies.<br> <br>
             </li>
           </ol>
         </p>
       <h2 class="issue">Issue Deep-Dive</h2>
-          <p>An issue I ran into during MP2 was getting Sketch 6 to work as intended.
-            I wanted to draw a sine wave in which its wavelength and amplitude depend on
-            the frequency and amplitude of the sound waves produced by the user
-            dragging their mouse across the screen, respectively. The main difficulty
-            of this was scaling it to fit on the display screen appropriately.</p>
-          <p> To solve this issue, I had to scale the angle and y accordingly. I
-            achieved this by a simple process of trial and error. Eventually I settled
-            on scaling the angle by a factor of 0.01, and the y by a factor of 200,
-            and this did the trick.</p>
+          <p>An issue I ran into during MP3 was scaling the pipes properly. When I had set up
+            the obstacles to be green rectangles, they scaled fine because I could simply make the
+            rectangle longer with no issue: <br> <br>
+            <IMG SRC="images/mp3ip2.png" height="300"> <br>
+          </p>
+          <p>However, when I loaded in images of the pipes to replace the obstacles, it stopped
+            producing the randomized gaps in between the pipes: <br> <br>
+            <IMG SRC="images/mp3issue2.png" height="300"> <br>
+          </p>
+          <p>Then when I tried to resize the pipes, it started stretching them out, significantly
+            distorting them: <br> <br>
+            <IMG SRC="images/mp3issue3.png" height="300"> <br>
+          </p>
+          <p>To solve this issue, rather than randomly resizing the length of the pipes, I randomly
+            repositioned their y position to avoid distorting them. This finally solved the issue: <br> <br>
+            <IMG SRC="images/mp3final.png" height="300"> <br>
+          </p>
 
       <h2 class="ideasandfuture">Ideas and Future</h2>
       <p>Here are some ideas and features I might like to add to my project in the
@@ -67,8 +86,6 @@
         <ul>
           <li> Adding in special arcade fonts for the score keeper and end of game message.</li> <br>
           <li> Rather than tapping anywhere to restart, having buttons for "Play Again" or "Quit."</li> <br>
-          <li> Loading in music and adding a sound for every pair of pipes the player jumps through, and
-            a sound for when the player dies.</li> <br>
           <li> Including a score tracker that keeps track of the player's highest score, then after a
             game is over displaying both the score from that game as well as the high score. Also, displaying
             the high score at the beginning of the screen. </li>
