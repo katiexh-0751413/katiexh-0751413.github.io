@@ -171,3 +171,27 @@ p {
   margin-left: 150px;
   font-size: larger;
 }
+
+.box-text {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+
+.box2 {
+  background-color: #F0A202;
+}
+
+.box3 {
+  background-color: #202C59;
+}
+
+.box4 {
+  background-color: #758BFD;
+}

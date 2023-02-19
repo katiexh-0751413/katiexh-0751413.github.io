@@ -69,3 +69,34 @@ nav {
   font-size: 35px;
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+.box-text {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  line-height: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box0 {
+  background-color: #014A25;
+}
+
+.box1 {
+  background-color: #D1462F;
+}
+
+.box2 {
+  background-color: #F0A202;
+}
+
+.box3 {
+  background-color: #202C59;
+}
+
+.box4 {
+  background-color: #758BFD;
+}
