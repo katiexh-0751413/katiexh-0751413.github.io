@@ -14,7 +14,7 @@
   gap: 12px;
 }
 
-.header, .overview, h2 {
+.header, .overview, h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 

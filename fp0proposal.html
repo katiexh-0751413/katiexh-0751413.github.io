@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp0writeup.css" />
+
+    <!-- Importing Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap'); </style>
+
+    <!-- Importing Nanum Gothic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <style> @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap'); </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-container">Home</a>
+      <a href="about.html" class="nav-container">About Me</a>
+      <a href="cheatsheets.html" class="nav-container">Cheatsheets</a>
+      <a href="writeups.html" class="nav-container">Writeups</a>
+    </nav>
+    <div class="page-container">
+
+      <h1 class="header">Final Project Proposal</h1>
+      <h2>Description</h2>
+        <p>For my final project, I aim to use p5.js to build a paint-like drawing app that allows
+          the user to download their art.</p>
+        <h2>Envisioned Interface</h2>
+        <p>Below I have included two drawings of my envisioned interface, in the prototype
+          and final stages: <br> <br>
+          <IMG SRC="images/prototypesketch.png" height="300"> &ensp;&ensp;&ensp;&ensp;
+          <IMG SRC="images/finalsketch.png" height="300"> <br>
+            <em>Sketch of Envisioned Prototype Stage&ensp;&ensp;&ensp;&ensp;&ensp;
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+              &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Sketch of Final Prototype Stage</em><br> <br>
+        </p>
+      <h2>Versions of Project</h2>
+      <h3>Prototype Version</h3>
+      <p>For the prototype version of my project, I will focus on the core features
+        of the app on a basic level. This means that the prototype will likely be in
+        grayscale and in a basic font, with only a simple draw, erase, and download
+        button available to the user. I plan on making the canvas white and the pen
+        black, with only one default pen size available in the prototype.
+      </p>
+      <h3>Final Version</h3>
+      <p>For the final version of my project, I plan to focus on the aesthetics more
+        and implement additional features, such as typeface, color, and allowing the
+        user to adjust the size of the pen and eraser.
+      </p>
+
+      <h2>Plan</h2>
+      <p>Here is my step-by-step plan for my development process:
+        <ol>
+          <strong>Prototype</strong> <br> <br>
+          <li> I will first create an empty repository on GitHub for my project.</li> <br>
+          <li> Then, I will start by programming in p5.js's online editor so that
+            I can easily watch my output and make sure that everything is running
+            as expected.</li> <br>
+          <li> I will create an empty canvas and color it white.</li> <br>
+          <li> I'll add two buttons, "clear" and "download." Then I'll implement
+            them so that "clear" clears the entire canvas, and "download" will save
+            the drawing to the user's files.</li> <br>
+          <li> Then I'll create a variable to represent the user's pen, and track
+            the user's mouse with it. Whenever the user presses on the mouse, it
+            will draw wherever on the screen it's pressed down on.</li> <br>
+          <li> Lastly, I plan on adding two buttons to the prototype for "pen" and
+            "eraser." By default, the user will start on the "pen" setting, but by
+            clicking the eraser button they can switch to an eraser and erase
+            certain parts of their work. Then they can easily switch back and forth
+            by simpling clicking the "pen" button to go back to using the pen.</li> <br>
+          <br> <strong>Final</strong> <br> <br>
+          <li> Firstly, I plan on including a CSS file to style some of the elements
+            on the page, including adding a new font for the title of the page,
+            colors on the page, etc.</li> <br>
+          <li>Then, I plan to implement sliders to adjust the sizes of the pen and
+              eraser.</li> <br>
+          <li> If I have enough time, I would love to add a few additional features
+            to the final project, including a "fill" feature that allows the user to
+            fill in certain closed areas in one solid color, a "draw-to-shape" feature
+            that makes it super easy for the user to draw perfect shapes, and a "text"
+            feature that allows the user to include text in their drawings.</li> <br>
+        </ol>
+      </p>
+
+      <h2>Unknowns</h2>
+      <p>These are a list of things I will have to figure out since I don't currently
+        know how to do them:
+        <ul>
+          <li>Create buttons in p5 (like a clear or download button).</li> <br>
+          <li>Recognizing shapes (if the user draws a circle, how do we know it's
+            a circle and not a square?).</li> <br>
+          <li>Creating sliders in p5 to allow the user to adjust the size of pen
+            and eraser.</li> <br>
+        </ul>
+      </p>
+      <h2>Stretch Goals</h2>
+        <ul>
+          <li>Including a draw-to-shape feature (for example, the user draws
+            a circle and it adjusts it into a perfect circle).</li> <br>
+          <li>Allowing the user to fill in blocks of color at once.</li> <br>
+          <li>Allowing the user to include text in the drawing by typing.</li> <br>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
