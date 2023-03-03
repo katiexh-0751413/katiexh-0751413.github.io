@@ -82,21 +82,29 @@ nav {
 }
 
 .box0 {
-  background-color: #014A25;
+  background-color: #8AA399;
 }
 
 .box1 {
-  background-color: #D1462F;
+  background-color: #582630;
 }
 
 .box2 {
-  background-color: #F0A202;
+  background-color: #8FA6CB;
 }
 
 .box3 {
-  background-color: #202C59;
+  background-color: #BE6E46;
 }
 
 .box4 {
-  background-color: #758BFD;
+  background-color: #7D84B2;
+}
+
+.box5 {
+  background-color: #475841;
+}
+
+.box6 {
+  background-color: #363457;
 }
