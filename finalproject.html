@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./mp0writeup.css" />
+
+    <!-- Importing Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <style> @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap'); </style>
+
+    <!-- Importing Nanum Gothic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <style> @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans:wght@500&family=Playfair+Display:wght@500&display=swap'); </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-container">Home</a>
+      <a href="about.html" class="nav-container">About Me</a>
+      <a href="cheatsheets.html" class="nav-container">Cheatsheets</a>
+      <a href="writeups.html" class="nav-container">Writeups</a>
+    </nav>
+    <div class="page-container">
+
+      <h1 class="header">Final Project Writeup</h1>
+      <h2 class="overview">Overview and Usage</h2>
+        <p>For my final project, I decided to create a sketch app using
+          P5.js that allows the user to draw a picture and save it as a file to
+          their computer. The features I decided to implement include drawing
+          with the pen tool, erasing, adjusting the size of pen or eraser using
+          a slider, picking the color of pen they would like to use through the
+          color panel or color picker, clearing the whole drawing, undo-ing the
+          last mark drawn (this works with both the "undo" button and using
+          ctrl+z), and saving the drawing to their computer as a .png file.</p>
+        <p>In order to use my drawing app, you can simply open the
+          <a href="https://katiexh-0751413.github.io/PaintFinal/">Paint</a> app
+          from the link and paint from there directly. Alternatively, you could
+          download the code from my
+          <a href="https://github.com/katiexh-0751413/PaintFinal">GitHub Respository</a>
+          and run it from your local server.</p>
+
+        <h2 class="development process">Development Process</h2>
+        <p>I broke this project up into several steps to complete it:
+          <ol>
+            <li>I first started with my
+              <a href="https://katiexh-0751413.github.io/PaintPrototype/">paint prototype</a>
+              that was already working, but had limited functionality and a super simple UI. <br> <br>
+              <IMG SRC="images/finalIP1.png" height="300"></li> <br>
+            <li>I updated the UI so that the menu bar looked a little nicer, first by making it
+              a ligher shade of gray and then adding lines between each section of buttons. I
+              also added shadows to the buttons through CSS. I added some labels to certain parts
+              of the menu bar, such as "size" on the slider, "colors" under the color palette, and
+              "color picker" under the color picker. I also made the text and outlines dark gray
+              instead of black so they aren't as harsh.<br> <br>
+              <IMG SRC="images/finalIP2.png" height="300"></li> <br>
+            <li>Then I added an "undo" button that allows the user to undo the last stroke they made.
+              I also added a ctrl+z functionality that works the same as the "undo" button so the
+              user can decide which they would like to use.<br> <br>
+              <IMG SRC="images/finalIP3.png" height="300"> <br> <br>
+            </li>
+            <li>Lastly, I went back and updated some bugs that were present in my code. For example,
+              the "save" function kept saving the entire canvas including the menu bar, instead of
+              only the part of the canvas that the user draws on. Another bug was that the "clear"
+              function kept clearing the whole screen, including the menu, rather than only clearing
+              the drawing area. Lastly, the way I implemented the "undo" button is that it takes a
+              screenshot of the canvas after every mark, so when the user "undo"s it brings back the
+              most recent screenshot. However, there was a bug where it was screenshotting the menu
+              as well and then putting the old screenshot directly over the new screenshot, which
+              started making the menu extremely blurry after undoing several times. So the last step
+              was to fix these bugs so that these functions worked as intended.
+             </li>
+          </ol>
+        </p>
+      <h2 class="issue">Issue Deep-Dive</h2>
+          <p>An issue I ran into was that after I implemented my color picker, it started overriding
+            the color palette. What I mean by this is that even if I selected a color from the color
+            palette, it wouldn't change the color from what was selected in the color picker.</p>
+          <p>To fix this, I had to implement several additional pieces of code. First, I added this
+            line to my colorPicker:
+          </p>
+          <div class="code-container">
+            <p>colorPicker.input(handleColorInput);</p>
+          </div>
+          <p>Then I added these functions:</p>
+          <div class="code-container">
+            <p>function colorButtonClicked(buttonColor) { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;c = buttonColor; <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;stroke(buttonColor); <br>
+            }</p>
+            <p>function handleColorInput() { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;eraserMode = false; <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;c = this.value(); <br>
+            }</p>
+          </div>
+          <p>Lastly, I added this to the loop that creates the color panel:</p>
+          <div class="code-container">
+            <p>colorButton.mousePressed(function() { <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;eraserMode = false; <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;colorButtonClicked(colors[i]); <br>
+            });</p>
+          </div>
+          <p>This way, both the color buttons and the color picker both update
+            the color as they should.</p>
+
+      <h2 class="ideasandfuture">Ideas and Future</h2>
+      <p>Here are some ideas and features I might like to add to my project in the
+        future for the final version:
+        <ul>
+          <li> Adding a "Shapes" option that allows the user to select a shape to draw. For example,
+            if they click on a circle icon, it will allow them to draw a perfect circle.</li> <br>
+          <li> This was one of my stretch goals, but adding a "fill" button that allows the user to
+               fill a certain area with a certain color. For example, if they drew a circle and would
+               like to color the circle red, they can use the "fill" option to easily do that.</li> <br>
+          <li>Allowing some sort of "copy" and "paste" function where they can select one part of
+            their sketch to copy and paste onto another area of the canvas. However, I feel like this
+            part would be pretty difficult to implement (similar to number 2) because this would
+            likely require keeping track of all the marks the user has drawn in a data structure
+            like an array or something.
+          </li>
+        </ul>
+      </p>
+
+      <h2 class="kudos">Kudos</h2>
+      <p>Here are some resources I found useful while working on this project:
+        <ul>
+          <li>This <a href="https://editor.p5js.org/stalgiag/sketches/ynaav4MsI">
+            P5 code</a> I found that provides an example for the "undo" function.</li> <br>
+          <li>Lots of P5 references, such as this <a href="https://p5js.org/reference/#/p5/createButton">createButton()</a>
+          that explains how to create a button, this <a href="https://p5js.org/reference/#/p5/saveCanvas">saveCanvas()</a>
+          that was helpful in creating my "save" button, and this <a href="https://p5js.org/reference/#/p5/text">text()</a>
+          function that was helpful in writing text to my menu bar.</li> <br>
+          <li>Lastly, some people in class helped me along the way as well. Hannah helped me fix the bug in my code
+            where the color picker was overriding the color panel, and in creating my buttons and putting shadows
+            on the buttons, and Christian helped me to create the color picker on my menu bar.</li> <br> <br>
+        </ul>
+      </p>
+      </div>
+    </div>
+  </body>
+</html>
